@@ -14,5 +14,3 @@ services:
     build: .
     depends_on:
       - mongodb
-    environment:
-      - MONGO_URI=mongodb://user:pass@mongodb:27017
