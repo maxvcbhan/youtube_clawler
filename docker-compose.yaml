@@ -1,0 +1,18 @@
+services:
+  mongodb:
+    image: mongodb/mongodb-community-server:latest
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=user
+      - MONGO_INITDB_ROOT_PASSWORD=pass
+    ports:
+      - 27017:27017
+    volumes:
+      - type: bind
+        source: ./data
+        target: /data/db
+  youtube:
+    build: .
+    depends_on:
+      - mongodb
+    environment:
+      - MONGO_URI=mongodb://user:pass@mongodb:27017

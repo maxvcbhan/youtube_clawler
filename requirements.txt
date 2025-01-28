@@ -1,0 +1,5 @@
+tweetpy
+pytchat
+python-dotenv
+mongoengine
+pymongo
