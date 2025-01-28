@@ -3,3 +3,4 @@ pytchat
 python-dotenv
 mongoengine
 pymongo
+pandas

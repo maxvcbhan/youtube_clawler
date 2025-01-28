@@ -12,5 +12,13 @@ services:
         target: /data/db
   youtube:
     build: .
+    volumes:
+      - type: bind
+        source: .env
+        target: /app/.env
+      - type: bind
+        source: ./yt_list.csv
+        target: /app/yt_list.csv
     depends_on:
       - mongodb
+
